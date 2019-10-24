@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">RemoteRaspCam</string>
+    <string name="activity_home_title">Home</string>
+    <string name="activity_home_status">Status</string>
+    <string name="activity_home_button_view">View</string>
+    <string name="activity_home_button_history">History</string>
+    <string name="activity_home_button_setting">Setting</string>
+    <string name="activity_setting_ip_address">IP Address</string>
+    <string name="activity_setting_port">Port</string>
+    <string name="activity_setting_button_save">Save</string>
 </resources>

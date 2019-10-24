@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "517232162338",
+    "firebase_url": "https://do-an-kien-truc-may-tinh.firebaseio.com",
+    "project_id": "do-an-kien-truc-may-tinh",
+    "storage_bucket": "do-an-kien-truc-may-tinh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517232162338:android:dc766453034d36d8c7fc7b",
+        "android_client_info": {
+          "package_name": "com.example.android.hethongnhung"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "517232162338-bnh28bctd6ajrramcmffm4icpurb06mm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.hethongnhung",
+            "certificate_hash": "102e8ef38c11b630e46cdafb1194f7d99a2d4fae"
+          }
+        },
+        {
+          "client_id": "517232162338-dg8img86df0lha1tem6b4uu45utk6aoe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdfDIqbwi0P-nxNdr5tea9qvv4_icqXXI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "517232162338-dg8img86df0lha1tem6b4uu45utk6aoe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

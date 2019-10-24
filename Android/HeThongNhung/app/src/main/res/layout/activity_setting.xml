@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context=".SettingActivity">
+
+    <TextView
+        android:id="@+id/textView_setting_ipAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_setting_ip_address"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/editText_setting_ipAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="IP Address"
+        android:inputType="textMultiLine"
+        android:singleLine="true"
+        android:typeface="monospace" />
+
+    <TextView
+        android:id="@+id/textView_setting_port"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_setting_port"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/editText_setting_port"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="port number"
+        android:inputType="textMultiLine"
+        android:singleLine="true" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/button_setting_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_setting_button_save" />
+    </GridLayout>
+
+</LinearLayout>
