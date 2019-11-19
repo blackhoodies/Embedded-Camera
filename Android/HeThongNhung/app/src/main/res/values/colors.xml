@@ -3,4 +3,11 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="colorBackground">#B0D8E9</color>
+    <color name="colorHistory">#4CADD7</color>
+    <color name="colorWhiteHistory">#FFFFFF</color>
+    <color name="colorBackgroundInformation">#4BADD7</color>
+    <color name="colorButtonInformation">#A1D8F2</color>
+    <color name="colorDarkBlue">#4BADD8</color>
+    <color name="divider_color">#000000</color>
 </resources>

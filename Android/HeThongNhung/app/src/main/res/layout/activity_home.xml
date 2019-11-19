@@ -1,95 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackgroundInformation"
+    android:orientation="vertical"
     tools:context=".HomeActivity">
 
-    <TextView
-        android:id="@+id/textView_home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/activity_home_title"
-        android:textAllCaps="true"
-        android:textSize="36sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    &lt;!&ndash;    <TextView&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:id="@+id/textView_home"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:layout_marginStart="16dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:layout_marginTop="16dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:text="@string/activity_home_title"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:textAllCaps="true"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:textSize="36sp"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:fontFamily="@font/arvo_bold"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:textColor="@color/colorWhiteHistory"&ndash;&gt;-->
+<!--    &lt;!&ndash;        app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--    &lt;!&ndash;        app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+<!--    <ImageView-->
+<!--        android:id="@+id/textView_home"-->
+<!--        android:layout_width="380dp"-->
+<!--        android:layout_height="80dp"-->
+<!--        android:src="@drawable/logo"-->
+<!--&lt;!&ndash;        app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.12" />
 
-    <TextView
-        android:id="@+id/textView_status"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/activity_home_status"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+<!--    &lt;!&ndash;        <androidx.constraintlayout.widget.Guideline&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:id="@+id/guideline"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:orientation="horizontal"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:background="@color/colorWhiteHistory"&ndash;&gt;-->
+<!--    &lt;!&ndash;            app:layout_constraintGuide_percent="0.12" />&ndash;&gt;-->
 
-    <TextView
-        android:id="@+id/textView_status_info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:textAllCaps="true"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_status"
-        app:layout_constraintStart_toEndOf="@+id/textView_status"
-        tools:text="Normal" />
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal">-->
 
-    <Button
-        android:id="@+id/button_home_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/activity_home_button_view"
-        app:layout_constraintBottom_toTopOf="@+id/button_home_history"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+<!--        <TextView-->
+<!--            android:id="@+id/textView_status"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--&lt;!&ndash;            android:layout_marginStart="16dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginTop="16dp"&ndash;&gt;-->
+<!--            android:fontFamily="@font/arvo_bold"-->
+<!--            android:text="@string/activity_home_status"-->
+<!--            android:textColor="@color/colorWhiteHistory"-->
+<!--            android:textSize="24sp"-->
+<!--&lt;!&ndash;            app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintTop_toTopOf="@+id/guideline" &ndash;&gt;-->
+<!--            />-->
 
-    <Button
-        android:id="@+id/button_home_setting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/activity_home_button_setting"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_home_history" />
+<!--        <TextView-->
+<!--            android:id="@+id/textView_status_info"-->
+<!--            android:layout_width="93dp"-->
+<!--            android:layout_height="17dp"-->
+<!--&lt;!&ndash;            android:layout_marginStart="24dp"&ndash;&gt;-->
+<!--            android:fontFamily="@font/arvo_bold"-->
+<!--            android:textAllCaps="true"-->
+<!--            android:textColor="@color/colorWhiteHistory"-->
+<!--            android:textSize="24dp"-->
+<!--&lt;!&ndash;            app:layout_constraintBottom_toBottomOf="@+id/textView_status"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintStart_toEndOf="@+id/textView_status"&ndash;&gt;-->
+<!--            tools:text="Normal" />-->
+<!--    </LinearLayout>-->
 
-    <Button
-        android:id="@+id/button_home_history"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/activity_home_button_history"
-        app:layout_constraintBottom_toTopOf="@+id/button_home_setting"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_home_view" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.75239396" />
+<!--    <Button-->
+<!--        android:id="@+id/button_home_view"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/capsule_button_blue"-->
+<!--        android:fontFamily="@font/arvo_bold"-->
+<!--        android:text="@string/activity_home_button_view"-->
+<!--        android:textColor="@color/colorWhiteHistory"-->
+<!--        android:textSize="24dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/button_home_history"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline3" />-->
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+<!--    <Button-->
+<!--        android:id="@+id/button_home_setting"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/capsule_button_blue"-->
+<!--        android:fontFamily="@font/arvo_bold"-->
+<!--        android:text="@string/activity_home_button_setting"-->
+<!--        android:textColor="@color/colorWhiteHistory"-->
+<!--        android:textSize="24dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline2"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/button_home_history" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button_home_history"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/capsule_button_blue"-->
+<!--        android:fontFamily="@font/arvo_bold"-->
+<!--        android:text="@string/activity_home_button_history"-->
+<!--        android:textColor="@color/colorWhiteHistory"-->
+<!--        android:textSize="24dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/button_home_setting"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/button_home_view" />-->
+
+<!--    &lt;!&ndash;        <androidx.constraintlayout.widget.Guideline&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:id="@+id/guideline2"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:orientation="horizontal"&ndash;&gt;-->
+<!--    &lt;!&ndash;            app:layout_constraintGuide_percent="0.75239396" />&ndash;&gt;-->
+
+<!--    &lt;!&ndash;        <androidx.constraintlayout.widget.Guideline&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:id="@+id/guideline3"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:orientation="horizontal"&ndash;&gt;-->
+<!--    &lt;!&ndash;            app:layout_constraintGuide_percent="0.2" />&ndash;&gt;-->
+
+</LinearLayout>

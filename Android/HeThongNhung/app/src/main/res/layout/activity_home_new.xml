@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="36dp"
+    android:background="@color/colorBackgroundInformation">
+    <ImageView
+        android:id="@+id/textView_home"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="@dimen/default_gap"
+        android:src="@drawable/logo"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_horizontal">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/default_gap"
+                android:fontFamily="@font/arvo_bold"
+                android:text="@string/activity_home_status"
+                android:textColor="@color/colorWhiteHistory"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView_status_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arvo_bold"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhiteHistory"
+                android:textSize="24dp"
+                tools:text="Normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/default_gap"
+                android:fontFamily="@font/arvo_bold"
+                android:text="Latest Falling"
+                android:textColor="@color/colorWhiteHistory"
+                android:textSize="24sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arvo_bold"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhiteHistory"
+                android:textSize="24dp"
+                android:text="10:10 11/11/2019"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/button_home_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_gap"
+            android:background="@drawable/capsule_button_blue"
+            android:fontFamily="@font/arvo_bold"
+            android:text="@string/activity_home_button_view"
+            android:textColor="@color/colorWhiteHistory"
+            android:textSize="24dp" />
+
+        <Button
+            android:id="@+id/button_home_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_gap"
+            android:background="@drawable/capsule_button_blue"
+            android:fontFamily="@font/arvo_bold"
+            android:text="@string/activity_home_button_setting"
+            android:textColor="@color/colorWhiteHistory"
+            android:textSize="24dp" />
+
+        <Button
+            android:id="@+id/button_home_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_gap"
+            android:background="@drawable/capsule_button_blue"
+            android:fontFamily="@font/arvo_bold"
+            android:text="@string/activity_home_button_history"
+            android:textColor="@color/colorWhiteHistory"
+            android:textSize="24dp" />
+    </LinearLayout>
+
+</LinearLayout>

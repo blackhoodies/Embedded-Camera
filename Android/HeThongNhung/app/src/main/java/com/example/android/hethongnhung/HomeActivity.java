@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,16 +16,30 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.messaging.FirebaseMessaging;
+
+import pub.devrel.easypermissions.EasyPermissions;
 
 public class HomeActivity extends AppCompatActivity {
     private TextView twStatusInfo;
     private Button btnView, btnHistory, btnSetting;
     private DatabaseReference mDatabase;
 
+    String[] perms = {
+            Manifest.permission.CAMERA,
+            Manifest.permission.ACCESS_WIFI_STATE,
+            Manifest.permission.CHANGE_WIFI_STATE,
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        FirebaseMessaging.getInstance().subscribeToTopic("broadcast");
+        setContentView(R.layout.activity_home_new);
+
+        if (!EasyPermissions.hasPermissions(this, perms)) {
+            EasyPermissions.requestPermissions(this, getString(R.string.permission_rationale), 1, perms);
+        }
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
         mDatabase.child("status").addChildEventListener(new FirebaseChildEventListener());

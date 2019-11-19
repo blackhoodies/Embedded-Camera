@@ -1,58 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="8dp"
+    android:background="@color/colorBackgroundInformation"
     tools:context=".SettingActivity">
 
     <TextView
-        android:id="@+id/textView_setting_ipAddress"
-        android:layout_width="match_parent"
+        android:id="@+id/textView_status"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/activity_setting_ip_address"
-        android:textSize="24sp" />
-
-    <EditText
-        android:id="@+id/editText_setting_ipAddress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:gravity="start|top"
-        android:hint="IP Address"
-        android:inputType="textMultiLine"
-        android:singleLine="true"
-        android:typeface="monospace" />
+        android:layout_margin="@dimen/default_gap"
+        android:fontFamily="@font/arvo_bold"
+        android:text="Setting"
+        android:textColor="@color/colorWhiteHistory"
+        android:textSize="36sp" />
 
     <TextView
-        android:id="@+id/textView_setting_port"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_gap"
+        android:fontFamily="@font/arvo_regular"
+        android:text="Configure the Raspberry Pi's IP address and the port number using to stream video from it's camera"
+        android:textColor="@color/colorWhiteHistory"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/activity_setting_port"
-        android:textSize="24sp" />
-
-    <EditText
-        android:id="@+id/editText_setting_port"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:gravity="start|top"
-        android:hint="port number"
-        android:inputType="textMultiLine"
-        android:singleLine="true" />
-
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp">
-
-        <Button
-            android:id="@+id/button_setting_save"
-            android:layout_width="wrap_content"
+        android:layout_margin="@dimen/default_gap">
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/activity_setting_button_save" />
-    </GridLayout>
+            android:background="@drawable/bg_edittext"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="4dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="4dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ip" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editText_setting_ipAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="IP address"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:textColor="#80878e"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_edittext"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="4dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="4dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/usb_port" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editText_setting_port"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="Port number"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColor="#80878e"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_setting_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_gap"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/capsule_button_blue"
+        android:fontFamily="@font/arvo_bold"
+        android:text="Save"
+        android:textColor="@color/colorWhiteHistory"
+        android:textSize="24dp" />
 
 </LinearLayout>

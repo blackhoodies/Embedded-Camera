@@ -3,9 +3,38 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">#4BADD8</item>
+        <item name="colorPrimaryDark">#FFFFFF</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_button_style1</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:width">100dp</item>
+    </style>
+
+<!--    <style name="ButtonLogin" parent="Widget.AppCompat.Button">-->
+<!--        <item name="android:background">@drawable/bg_button_login</item>-->
+<!--        <item name="android:textSize">@dimen/_25sdp</item>-->
+<!--        <item name="android:textColor">#FFFFFF</item>-->
+<!--        <item name="android:minHeight">0dp</item>-->
+<!--        <item name="android:minWidth">0dp</item>-->
+<!--        <item name="android:textStyle">bold</item>-->
+<!--        <item name="android:height">@dimen/_50sdp</item>-->
+<!--        <item name="android:width">@dimen/_100sdp</item>-->
+<!--    </style>-->
+
+    <style name="Divider">
+        <item name="android:layout_width">1dip</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/divider_color</item>
     </style>
 
 </resources>
