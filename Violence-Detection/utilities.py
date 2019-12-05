@@ -2,7 +2,7 @@ import cv2 as cv
 import numpy as np
 
 def img_process(fgMask):
-
+    """
     backSub = cv.createBackgroundSubtractorKNN()
     kernel1 = cv.getStructuringElement(shape=cv.MORPH_ELLIPSE, ksize=(2,2))
     kernel2 = cv.getStructuringElement(shape=cv.MORPH_ELLIPSE, ksize=(2,2))
@@ -13,7 +13,17 @@ def img_process(fgMask):
     fgMask = cv.morphologyEx(fgMask, cv.MORPH_OPEN, kernel1,iterations = 3)
     fgMask = cv.dilate(fgMask, kernel2, iterations = 2)
     fgMask = cv.morphologyEx(fgMask, cv.MORPH_CLOSE, kernel2, iterations = 13)
+    """
+    backSub = cv.createBackgroundSubtractorKNN()
+    kernel1 = cv.getStructuringElement(shape=cv.MORPH_ELLIPSE, ksize=(2,2))
+    kernel2 = cv.getStructuringElement(shape=cv.MORPH_ELLIPSE, ksize=(2,2))
+    #kernel1 = np.ones((3,3),np.uint8)
+    #kernel2 = np.ones((3,3), np.uint8)
 
+    fgMask = cv.threshold(fgMask, 230, 255, cv.THRESH_BINARY)[1]
+    fgMask = cv.morphologyEx(fgMask, cv.MORPH_OPEN, kernel1,iterations = 2)
+    fgMask = cv.dilate(fgMask, kernel2, iterations = 2)
+    fgMask = cv.morphologyEx(fgMask, cv.MORPH_CLOSE, kernel2, iterations = 2)
     return fgMask
 
 def find_ellipse(fgMask):
@@ -50,12 +60,12 @@ def draw_flow(img, flow, step=16):
     fx, fy = flow[y,x].T
     lines = np.vstack([x,y,x+fx,y+fy]).T.reshape(-1,2,2)
     lines = np.int32(lines + 0.5)
-    vis = cv.cvtColor(img, cv.COLOR_GRAY2BGR)
+    #vis = cv.cvtColor(img, cv.COLOR_GRAY2BGR)
 
-    cv.polylines(vis, lines, 0, (0,255,0))
+    cv.polylines(img, lines, 0, (0,255,0))
     for (x1,y1), (x2,y2) in lines:
-        cv.circle(vis, (x1,y1), 1, (0,255,0),-1)
-    return vis
+        cv.circle(img, (x1,y1), 1, (0,255,0),-1)
+    return img   
 
 def draw_hsv(flow):
     h, w = flow.shape[:2]
